@@ -26,7 +26,7 @@ class Recipe {
     }
     
     substituteIngredient(old, new) {
-        var location = this.ingredients.indexOf(old.getName);
+        var location = this.ingredients.indexOf(old);
         if (location >= 0) {
             this.ingredients[location] = new;
         }
