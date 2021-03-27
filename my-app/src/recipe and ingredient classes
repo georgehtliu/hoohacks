@@ -1,0 +1,46 @@
+class Recipe {
+    constructor(name, date, ingerdients) {
+        this.name = name;
+        this.date = date;
+        this.ingredients = ingredients;
+    }
+    
+    getName() { return this.name; }
+    getAge() { return this.age; }
+    getIngredients() { return this.ingredients; }
+    
+    findTotalCalories() {
+        var calories = 0;
+        for (var i = 0; i < this.ingredients.length; i++) {
+            calories += this.ingredients[i].getCalories();
+        }
+        return calories;
+    }
+    
+    findTotalPrice() {
+        var price = 0;
+        for (var i = 0; i < this.ingredients.length; i++) {
+            price += this.ingredients[i].getPrice();
+        }
+        return price;
+    }
+    
+    substituteIngredient(old, new) {
+        var location = this.ingredients.indexOf(old.getName);
+        if (location >= 0) {
+            this.ingredients[location] = new;
+        }
+    }
+}
+
+class Ingredient {
+    constructor(name, price, calories) {
+        this.name = name;
+        this.price = price;
+        this.calories = calories;
+    }
+    
+    getName() { return this.name; }
+    getPrice() { return this.price; }
+    getCalories() { return this.calories; }
+}
