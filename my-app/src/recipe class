@@ -1,0 +1,23 @@
+class Recipe {
+    constructor(name, date, ingerdients, calories, price) {
+        this.name = name;
+        this.date = date;
+        this.ingredients = ingredients;
+        this.calories = calories;
+        this.price = price;
+    }
+    
+    getName() { return this.name; }
+    getAge() { return this.age; }
+    getIngredients() { return this.ingredients; }
+    getCalories() { return this.calories; }
+    getPrice() { return this.price; )
+    
+    substituteIngredient(old, new) {
+        var location = this.ingredients.indexOf(old);
+        if (location >= 0) {
+            this.ingredients[location] = new;
+        }
+    }
+}
+
