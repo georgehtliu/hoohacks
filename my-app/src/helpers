@@ -1,0 +1,4 @@
+function splitString(s) {
+	var splitArray = s.split(",");
+    return splitArray;
+}
