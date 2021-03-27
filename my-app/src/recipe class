@@ -11,12 +11,12 @@ class Recipe {
     getAge() { return this.age; }
     getIngredients() { return this.ingredients; }
     getCalories() { return this.calories; }
-    getPrice() { return this.price; )
+    getPrice() { return this.price; }
     
-    substituteIngredient(old, new) {
-        var location = this.ingredients.indexOf(old);
+    substituteIngredient(original, replacement) {
+        var location = this.ingredients.indexOf(original);
         if (location >= 0) {
-            this.ingredients[location] = new;
+            this.ingredients[location] = replacement;
         }
     }
 }
